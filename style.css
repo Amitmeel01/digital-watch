@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.body{
+    background: rgba(0, 0, 255, 0.335);
+}
+.container{
+      width: 100%;
+      
+      min-height: 100vh;
+      background: linear-gradient(45deg,#08001f,#30197d);
+      color: #fff;
+}
+.clock{
+   
+    width: 90%;
+    max-width: 700px;
+    height: 150px;
+    transform: translate(50%,150%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg,rgba(255, 0, 0, 0.411),rgba(0, 0, 255, 0.353),rgba(255, 255, 0, 0.312));
+    text-align: center;
+    font-size: 30px;
+    
+    
+    
+   
+}
+ .clock::before{
+    content: "";
+    width: 130px;
+    height: 130px;
+    z-index: -1;
+    background: rgb(255, 192, 224);
+    position: relative;
+    top: -20px;
+    left: -150px;
+
+}
+.clock::after{
+    content: "";
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    z-index: -1;
+    background: skyblue;
+    position: relative;
+    top: 30px;
+    left: 180px;
+
+}
+.clock span{
+    font-size: 70px;
+    display: inline-block;
+    width: 60px;
+}
+.clock span::after{
+    
+    font-size: 25px;
+    color: white;
+    position: relative;
+    top: 40px;
+    left: -50px;
+    text-align: center;
+    transform: translate(-50%);
+    
+    
+}
+#hrs::after{
+    content: "hrs";
+}
+#min::after{
+    content: "min";
+}
+#sec::after{
+    content: "sec";
+}
